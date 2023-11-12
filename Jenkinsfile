@@ -24,7 +24,7 @@ pipeline {
             when {
                 expression {
                     // Another condition
-                    return env.BRANCH_NAME == 'main' && currentBuild.resultIsBetterOrEqualTo('FAILURE')
+                    return env.BRANCH_NAME == 'main1' && currentBuild.resultIsBetterOrEqualTo('FAILURE')
                 }
             }
             steps {
