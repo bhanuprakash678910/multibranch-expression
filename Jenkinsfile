@@ -12,7 +12,7 @@ pipeline {
             when {
                 expression {
                     // Define your condition here
-                    return env.BRANCH_NAME == 'main'
+                    return params.BRANCH_NAME == 'main'
                 }
             }
             steps {
@@ -24,7 +24,7 @@ pipeline {
             when {
                 expression {
                     // Another condition
-                    return env.BRANCH_NAME == 'main' && currentBuild.resultIsBetterOrEqualTo('SUCCESS')
+                    return params.BRANCH_NAME == 'main' && currentBuild.resultIsBetterOrEqualTo('SUCCESS')
                 }
             }
             steps {
